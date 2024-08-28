@@ -19,7 +19,7 @@ class AnimateGradient extends StatefulWidget {
     this.duration = const Duration(seconds: 4),
     this.animateAlignments = true,
     this.reverse = true,
-    this.borderRadius;
+    this.borderRadius,
   })  : assert(primaryColors.length >= 2),
         assert(primaryColors.length == secondaryColors.length),
         super(key: key);
