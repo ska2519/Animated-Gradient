@@ -19,6 +19,7 @@ class AnimateGradient extends StatefulWidget {
     this.duration = const Duration(seconds: 4),
     this.animateAlignments = true,
     this.reverse = true,
+    this.borderRadius;
   })  : assert(primaryColors.length >= 2),
         assert(primaryColors.length == secondaryColors.length),
         super(key: key);
@@ -84,6 +85,8 @@ class AnimateGradient extends StatefulWidget {
   /// using that it will go into one direction only
   final bool reverse;
 
+  final BorderRadius borderRadius;
+
   final Widget? child;
 
   @override
@@ -129,6 +132,7 @@ class _AnimateGradientState extends State<AnimateGradient>
       builder: (BuildContext context, Widget? child) {
         return Container(
           decoration: BoxDecoration(
+            borderRadius: borderRadius,
             gradient: LinearGradient(
               begin: widget.animateAlignments
                   ? begin.evaluate(_animation)
