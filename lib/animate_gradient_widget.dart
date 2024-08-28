@@ -132,7 +132,7 @@ class _AnimateGradientState extends State<AnimateGradient>
       builder: (BuildContext context, Widget? child) {
         return Container(
           decoration: BoxDecoration(
-            borderRadius: borderRadius,
+            borderRadius: widget.borderRadius,
             gradient: LinearGradient(
               begin: widget.animateAlignments
                   ? begin.evaluate(_animation)
