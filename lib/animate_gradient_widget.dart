@@ -85,7 +85,7 @@ class AnimateGradient extends StatefulWidget {
   /// using that it will go into one direction only
   final bool reverse;
 
-  final BorderRadius borderRadius;
+  final BorderRadius? borderRadius;
 
   final Widget? child;
 
