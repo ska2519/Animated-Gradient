@@ -19,7 +19,7 @@ class AnimateGradient extends StatefulWidget {
     this.duration = const Duration(seconds: 4),
     this.animateAlignments = true,
     this.reverse = true,
-    this.borderRadius,
+    this.borderRadius = BorderRadius.zero,
   })  : assert(primaryColors.length >= 2),
         assert(primaryColors.length == secondaryColors.length),
         super(key: key);
@@ -85,7 +85,7 @@ class AnimateGradient extends StatefulWidget {
   /// using that it will go into one direction only
   final bool reverse;
 
-  final BorderRadius? borderRadius;
+  final BorderRadius borderRadius;
 
   final Widget? child;
 
